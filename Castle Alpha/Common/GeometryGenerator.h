@@ -80,7 +80,7 @@ public:
 	///</summary>
     MeshData CreateBox(float width, float height, float depth, uint32 numSubdivisions);
 	MeshData CreateBar(float width, float height, float depth, uint32 numSubdivisions);
-
+	MeshData CreateChocolate(float width, float height, float depth, uint32 numSubdivisions);
 	///<summary>
 	/// Creates a sphere centered at the origin with the given radius.  The
 	/// slices and stacks parameters control the degree of tessellation.

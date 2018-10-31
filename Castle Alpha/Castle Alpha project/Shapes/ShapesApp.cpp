@@ -540,7 +540,7 @@ void ShapesApp::BuildShapeGeometry()////////////////////////////////////////////
 	GeometryGenerator::MeshData cone = geoGen.CreateCone(0.5f, 1.0f, 20, 20);
 	GeometryGenerator::MeshData wedge = geoGen.CreateWedge(1.0f, 1.0f, 1.0f, 3);
 	GeometryGenerator::MeshData quad = geoGen.CreateQuad(0.0f, 0.0f, 1.0f, 1.0f, 3);
-	GeometryGenerator::MeshData bar = geoGen.CreateBar(1.0f, 1.0f, 1.0f, 3);
+	GeometryGenerator::MeshData bar = geoGen.CreateChocolate(1.0f, 1.0f, 1.0f, 3);
 	GeometryGenerator::MeshData boxthree = box;
 	GeometryGenerator::MeshData boxfour = box;
 	GeometryGenerator::MeshData boxfive = box;
@@ -1397,12 +1397,13 @@ void ShapesApp::BuildRenderItems()//////////////////////////////////////////////
 	j++;
 	*/
 
-for (int i = 1; i < 11; i++)
+for (int i = 1; i < 1; i++)
 {
 	auto barItem = std::make_unique<RenderItem>();
-	auto boxItem = std::make_unique<RenderItem>();
+	//auto boxItem = std::make_unique<RenderItem>();
+	//ten top chocolate
 
-	for (int q = 0; q < 2; q++)
+	/*for (int q = 0; q < 2; q++)
 	{
 		for (int k = 0; k < 5; k++)
 		{
@@ -1419,8 +1420,8 @@ for (int i = 1; i < 11; i++)
 			j++;
 
 		}
-	}
-
+	}*/
+	//bottom solid piece
 	auto barRitem = std::make_unique<RenderItem>();
 	XMStoreFloat4x4(&barRitem->World, XMMatrixScaling(2.0f, 0.1f, 2.5f)*XMMatrixTranslation(0.0f, i, 0.0f));
 	barRitem->ObjCBIndex = j;
@@ -1433,10 +1434,12 @@ for (int i = 1; i < 11; i++)
 	j++;
 }
 
+
+//some candy
 UINT objCBIndex = j;
 	for(int c = 0; c < 10; ++c)
 	{
-		auto topDiamitem = std::make_unique<RenderItem>();
+	/*	auto topDiamitem = std::make_unique<RenderItem>();
 		auto botDiamitem = std::make_unique<RenderItem>();
 
 		XMMATRIX topDiamWorld = XMMatrixTranslation(0.0f + (2*c), 0.225f, 0.0f);
@@ -1459,7 +1462,7 @@ UINT objCBIndex = j;
 		botDiamitem->BaseVertexLocation = botDiamitem->Geo->DrawArgs["hexagon"].BaseVertexLocation;
 
 		mAllRitems.push_back(std::move(topDiamitem));
-		mAllRitems.push_back(std::move(botDiamitem));
+		mAllRitems.push_back(std::move(botDiamitem));*/
 	}
 
 	
