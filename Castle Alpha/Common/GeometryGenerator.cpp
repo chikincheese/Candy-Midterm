@@ -614,31 +614,491 @@ GeometryGenerator::MeshData GeometryGenerator::CreateChocolate(float width, floa
 		//
 		uint32 i[396];
 		// Fill in the front face index data
-		i[0 ] = 0; i[1 ] = 1; i[2 ] = 2;
-		i[3 ] = 0; i[4 ] = 2; i[5 ] = 3;
+		//Bottom Box
+		i[0] = 0; 
+		i[1] = 1; 
+		i[2] = 2;
+		i[3] = 0; 
+		i[4] = 2; 
+		i[5] = 3;
 
 		// Fill in the back face index data
-		i[6] = 4; i[7] = 5; i[8] = 6;
-		i[9] = 4; i[10] = 6; i[11] = 7;
+		i[6] = 4; 
+		i[7] = 5; 
+		i[8] = 6;
+		i[9] = 4; 
+		i[10] = 6; 
+		i[11] = 7;
 
 		// Fill in the top face index data
-		i[12] = 8; i[13] = 9; i[14   ] = 10;
-		i[15] = 8; i[16   ] = 10; i[17   ] = 11;
+		i[12] = 8; 
+		i[13] = 9; 
+		i[14] = 10;
+		i[15] = 8; 
+		i[16] = 10; 
+		i[17] = 11;
 
 		// Fill in the bottom face index data
-		i[18   ] = 12; i[19   ] = 13; i[20   ] = 14;
-		i[21   ] = 12; i[22   ] = 14; i[23   ] = 15;
+		i[18] = 12; 
+		i[19] = 13; 
+		i[20] = 14;
+		i[21] = 12; 
+		i[22] = 14; 
+		i[23] = 15;
 
 		// Fill in the left face index data
-		i[24   ] = 16; i[25   ] = 17; i[26   ] = 18;
-		i[27   ] = 16; i[28   ] = 18; i[29   ] = 19;
+		i[24] = 16; 
+		i[25] = 17; 
+		i[26] = 18;
+		i[27] = 16; 
+		i[28] = 18; 
+		i[29] = 19;
 
 		// Fill in the right face index data
-		i[30   ] = 20; i[31   ] = 21; i[32   ] = 22;
-		i[33   ] = 20; i[34   ] = 22; i[35   ] = 23;
+		i[30] = 20; 
+		i[31] = 21; 
+		i[32] = 22;
+		i[33] = 20; 
+		i[34] = 22; 
+		i[35] = 23;
 
+		//Candy top 1
+		i[36] = 0;
+		i[37] = 1;
+		i[38] = 2;
+		i[39] = 0;
+		i[40] = 2;
+		i[41] = 3;
+
+		// Fill in the back face index data
+		i[42] = 4;
+		i[43] = 5;
+		i[44] = 6;
+		i[45] = 4;
+		i[46] = 6;
+		i[47] = 7;
+
+		// Fill in the top face index data
+		i[48] = 8;
+		i[49] = 9;
+		i[50] = 10;
+		i[51] = 8;
+		i[52] = 10;
+		i[53] = 11;
+
+		// Fill in the bottom face index data
+		i[54] = 12;
+		i[55] = 13;
+		i[56] = 14;
+		i[57] = 12;
+		i[58] = 14;
+		i[59] = 15;
+
+		// Fill in the left face index data
+		i[60] = 16;
+		i[61] = 17;
+		i[62] = 18;
+		i[63] = 16;
+		i[64] = 18;
+		i[65] = 19;
+
+		// Fill in the right face index data
+		i[66] = 20;
+		i[67] = 21;
+		i[68] = 22;
+		i[67] = 20;
+		i[70] = 22;
+		i[71] = 23;
+
+		//Candy top 2
+		i[72] = 0;
+		i[73] = 1;
+		i[74] = 2;
+		i[75] = 0;
+		i[76] = 2;
+		i[77] = 3;
+
+		// Fill in the back face index data
+		i[78] = 4;
+		i[79] = 5;
+		i[80] = 6;
+		i[81] = 4;
+		i[82] = 6;
+		i[83] = 7;
+
+		// Fill in the top face index data
+		i[84] = 8;
+		i[85] = 9;
+		i[86] = 10;
+		i[87] = 8;
+		i[88] = 10;
+		i[89] = 11;
+
+		// Fill in the bottom face index data
+		i[90] = 12;
+		i[91] = 13;
+		i[92] = 14;
+		i[93] = 12;
+		i[94] = 14;
+		i[95] = 15;
+
+		// Fill in the left face index data
+		i[96] = 16;
+		i[97] = 17;
+		i[98] = 18;
+		i[99] = 16;
+		i[100] = 18;
+		i[101] = 19;
+
+		// Fill in the right face index data
+		i[102] = 20;
+		i[103] = 21;
+		i[104] = 22;
+		i[105] = 20;
+		i[106] = 22;
+		i[107] = 23;
+
+		//Candy top 3
+		i[108] = 0;
+		i[109] = 1;
+		i[110] = 2;
+		i[111] = 0;
+		i[112] = 2;
+		i[113] = 3;
+
+		// Fill in the back face index data
+		i[114] = 4;
+		i[115] = 5;
+		i[116] = 6;
+		i[117] = 4;
+		i[118] = 6;
+		i[119] = 7;
+
+		// Fill in the top face index data
+		i[120] = 8;
+		i[121] = 9;
+		i[122] = 10;
+		i[123] = 8;
+		i[124] = 10;
+		i[125] = 11;
+
+		// Fill in the bottom face index data
+		i[126] = 12;
+		i[127] = 13;
+		i[128] = 14;
+		i[129] = 12;
+		i[130] = 14;
+		i[131] = 15;
+
+		// Fill in the left face index data
+		i[132] = 16;
+		i[133] = 17;
+		i[134] = 18;
+		i[135] = 16;
+		i[136] = 18;
+		i[137] = 19;
+
+		// Fill in the right face index data
+		i[138] = 20;
+		i[139] = 21;
+		i[140] = 22;
+		i[141] = 20;
+		i[142] = 22;
+		i[143] = 23;
+
+		//Candy top 4
+		i[144] = 0;
+		i[145] = 1;
+		i[146] = 2;
+		i[147] = 0;
+		i[148] = 2;
+		i[149] = 3;
+
+		// Fill in the back face index data
+		i[150] = 4;
+		i[151] = 5;
+		i[152] = 6;
+		i[153] = 4;
+		i[154] = 6;
+		i[155] = 7;
+
+		// Fill in the top face index data
+		i[156] = 8;
+		i[157] = 9;
+		i[158] = 10;
+		i[159] = 8;
+		i[160] = 10;
+		i[161] = 11;
+
+		// Fill in the bottom face index data
+		i[162] = 12;
+		i[163] = 13;
+		i[164] = 14;
+		i[165] = 12;
+		i[166] = 14;
+		i[167] = 15;
+
+		// Fill in the left face index data
+		i[168] = 16;
+		i[169] = 17;
+		i[170] = 18;
+		i[171] = 16;
+		i[172] = 18;
+		i[173] = 19;
+
+		// Fill in the right face index data
+		i[174] = 20;
+		i[175] = 21;
+		i[176] = 22;
+		i[177] = 20;
+		i[178] = 22;
+		i[179] = 23;
+
+		//Candy top 5
+		i[180] = 0;
+		i[181] = 1;
+		i[182] = 2;
+		i[183] = 0;
+		i[184] = 2;
+		i[185] = 3;
+
+		// Fill in the back face index data
+		i[186] = 4;
+		i[187] = 5;
+		i[188] = 6;
+		i[189] = 4;
+		i[190] = 6;
+		i[191] = 7;
+
+		// Fill in the top face index data
+		i[192] = 8;
+		i[193] = 9;
+		i[194] = 10;
+		i[195] = 8;
+		i[196] = 10;
+		i[197] = 11;
+
+		// Fill in the bottom face index data
+		i[198] = 12;
+		i[199] = 13;
+		i[200] = 14;
+		i[201] = 12;
+		i[202] = 14;
+		i[203] = 15;
+
+		// Fill in the left face index data
+		i[204] = 16;
+		i[205] = 17;
+		i[206] = 18;
+		i[207] = 16;
+		i[208] = 18;
+		i[209] = 19;
+
+		// Fill in the right face index data
+		i[210] = 20;
+		i[211] = 21;
+		i[212] = 22;
+		i[213] = 20;
+		i[214] = 22;
+		i[215] = 23;
+
+
+		//Candy top 6
+		i[216] = 0;
+		i[217] = 1;
+		i[218] = 2;
+		i[219] = 0;
+		i[220] = 2;
+		i[221] = 3;
+
+		// Fill in the back face index data
+		i[222] = 4;
+		i[223] = 5;
+		i[224] = 6;
+		i[225] = 4;
+		i[226] = 6;
+		i[227] = 7;
+
+		// Fill in the top face index data
+		i[228] = 8;
+		i[229] = 9;
+		i[230] = 10;
+		i[231] = 8;
+		i[232] = 10;
+		i[233] = 11;
+
+		// Fill in the bottom face index data
+		i[234] = 12;
+		i[235] = 13;
+		i[236] = 14;
+		i[237] = 12;
+		i[238] = 14;
+		i[239] = 15;
+
+		// Fill in the left face index data
+		i[240] = 16;
+		i[241] = 17;
+		i[242] = 18;
+		i[243] = 16;
+		i[244] = 18;
+		i[245] = 19;
+
+		// Fill in the right face index data
+		i[246] = 20;
+		i[247] = 21;
+		i[248] = 22;
+		i[249] = 20;
+		i[250] = 22;
+		i[251] = 23;
+
+		//Candy top 7
+		i[252] = 0;
+		i[253] = 1;
+		i[254] = 2;
+		i[255] = 0;
+		i[256] = 2;
+		i[257] = 3;
+
+		// Fill in the back face index data
+		i[258] = 4;
+		i[259] = 5;
+		i[260] = 6;
+		i[261] = 4;
+		i[262] = 6;
+		i[263] = 7;
+
+		// Fill in the top face index data
+		i[264] = 8;
+		i[265] = 9;
+		i[266] = 10;
+		i[267] = 8;
+		i[268] = 10;
+		i[269] = 11;
+
+		// Fill in the bottom face index data
+		i[270] = 12;
+		i[271] = 13;
+		i[272] = 14;
+		i[273] = 12;
+		i[274] = 14;
+		i[275] = 15;
+
+		// Fill in the left face index data
+		i[276] = 16;
+		i[277] = 17;
+		i[278] = 18;
+		i[279] = 16;
+		i[280] = 18;
+		i[281] = 19;
+
+		// Fill in the right face index data
+		i[282] = 20;
+		i[283] = 21;
+		i[284] = 22;
+		i[285] = 20;
+		i[286] = 22;
+		i[287] = 23;
+
+		//Candy top 8
+		i[288] = 0;
+		i[289] = 1;
+		i[290] = 2;
+		i[291] = 0;
+		i[292] = 2;
+		i[293] = 3;
+
+		// Fill in the back face index data
+		i[294] = 4;
+		i[295] = 5;
+		i[296] = 6;
+		i[297] = 4;
+		i[298] = 6;
+		i[299] = 7;
+
+		// Fill in the top face index data
+		i[300] = 8;
+		i[301] = 9;
+		i[302] = 10;
+		i[303] = 8;
+		i[304] = 10;
+		i[305] = 11;
+
+		// Fill in the bottom face index data
+		i[306] = 12;
+		i[307] = 13;
+		i[308] = 14;
+		i[309] = 12;
+		i[310] = 14;
+		i[311] = 15;
+
+		// Fill in the left face index data
+		i[312] = 16;
+		i[313] = 17;
+		i[314] = 18;
+		i[315] = 16;
+		i[316] = 18;
+		i[317] = 19;
+
+		// Fill in the right face index data
+		i[318] = 20;
+		i[319] = 21;
+		i[320] = 22;
+		i[321] = 20;
+		i[322] = 22;
+		i[323] = 23;
+
+		//Candy top 9
+		i[324] = 0;
+		i[325] = 1;
+		i[326] = 2;
+		i[327] = 0;
+		i[328] = 2;
+		i[329] = 3;
+
+		// Fill in the back face index data
+		i[330] = 4;
+		i[331] = 5;
+		i[332] = 6;
+		i[333] = 4;
+		i[334] = 6;
+		i[335] = 7;
+
+		// Fill in the top face index data
+		i[336] = 8;
+		i[337] = 9;
+		i[338] = 10;
+		i[339] = 8;
+		i[340] = 10;
+		i[341] = 11;
+
+		// Fill in the bottom face index data
+		i[342] = 12;
+		i[343] = 13;
+		i[344] = 14;
+		i[345] = 12;
+		i[346] = 14;
+		i[347] = 15;
+
+		// Fill in the left face index data
+		i[348] = 16;
+		i[349] = 17;
+		i[350] = 18;
+		i[351] = 16;
+		i[352] = 18;
+		i[353] = 19;
+
+		// Fill in the right face index data
+		i[354] = 20;
+		i[355] = 21;
+		i[356] = 22;
+		i[357] = 20;
+		i[358] = 22;
+		i[359] = 23;
+
+		//candy 10
 		// Fill in the front face index data
-		i[360] = 0; i[361] = 1; i[362] = 2;
+		i[360] = 0; 
+		i[361] = 1; i[362] = 2;
 		i[363] = 0; i[364] = 2; i[365] = 3;
 
 		// Fill in the back face index data
@@ -665,8 +1125,8 @@ GeometryGenerator::MeshData GeometryGenerator::CreateChocolate(float width, floa
 	// Put a cap on the number of subdivisions.
 	numSubdivisions = std::min<uint32>(numSubdivisions, 6u);
 
-//	for (uint32 q = 0; q < numSubdivisions; ++q)
-	//	Subdivide(meshData);
+	for (uint32 i = 0; i < numSubdivisions; ++i)
+		Subdivide(meshData);
 
 	return meshData;
 

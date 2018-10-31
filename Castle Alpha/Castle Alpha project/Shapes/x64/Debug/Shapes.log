@@ -1,17 +1,15 @@
 ﻿  GeometryGenerator.cpp
-c:\users\anton\desktop\candy-midterm\castle alpha\common\geometrygenerator.cpp(963): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-c:\users\anton\desktop\candy-midterm\castle alpha\common\geometrygenerator.cpp(1726): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-c:\users\anton\desktop\candy-midterm\castle alpha\common\geometrygenerator.cpp(1734): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-c:\users\anton\desktop\candy-midterm\castle alpha\common\geometrygenerator.cpp(1735): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-c:\users\anton\desktop\candy-midterm\castle alpha\common\geometrygenerator.cpp(1736): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-c:\users\anton\desktop\candy-midterm\castle alpha\common\geometrygenerator.cpp(1737): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-c:\users\anton\desktop\candy-midterm\castle alpha\common\geometrygenerator.cpp(1738): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-c:\users\anton\desktop\candy-midterm\castle alpha\common\geometrygenerator.cpp(1739): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-c:\users\anton\desktop\candy-midterm\castle alpha\common\geometrygenerator.cpp(1740): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-c:\users\anton\desktop\candy-midterm\castle alpha\common\geometrygenerator.cpp(1909): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-c:\users\anton\desktop\candy-midterm\castle alpha\common\geometrygenerator.cpp(1910): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-c:\users\anton\desktop\candy-midterm\castle alpha\common\geometrygenerator.cpp(1911): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-  ShapesApp.cpp
-  Generating Code...
-c:\users\anton\desktop\candy-midterm\castle alpha\common\geometrygenerator.cpp(2074): warning C4715: 'GeometryGenerator::CreateDiamond': not all control paths return a value
+c:\users\anton\desktop\candy-midterm\castle alpha\common\geometrygenerator.cpp(1423): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\anton\desktop\candy-midterm\castle alpha\common\geometrygenerator.cpp(2186): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\anton\desktop\candy-midterm\castle alpha\common\geometrygenerator.cpp(2194): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\anton\desktop\candy-midterm\castle alpha\common\geometrygenerator.cpp(2195): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\anton\desktop\candy-midterm\castle alpha\common\geometrygenerator.cpp(2196): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\anton\desktop\candy-midterm\castle alpha\common\geometrygenerator.cpp(2197): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\anton\desktop\candy-midterm\castle alpha\common\geometrygenerator.cpp(2198): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\anton\desktop\candy-midterm\castle alpha\common\geometrygenerator.cpp(2199): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\anton\desktop\candy-midterm\castle alpha\common\geometrygenerator.cpp(2200): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\anton\desktop\candy-midterm\castle alpha\common\geometrygenerator.cpp(2369): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\anton\desktop\candy-midterm\castle alpha\common\geometrygenerator.cpp(2370): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\anton\desktop\candy-midterm\castle alpha\common\geometrygenerator.cpp(2371): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\anton\desktop\candy-midterm\castle alpha\common\geometrygenerator.cpp(2534): warning C4715: 'GeometryGenerator::CreateDiamond': not all control paths return a value
   Shapes.vcxproj -> C:\Users\Anton\Desktop\Candy-Midterm\Castle Alpha\Castle Alpha project\Shapes\x64\Debug\Shapes.exe
