@@ -1399,7 +1399,7 @@ void ShapesApp::BuildRenderItems()//////////////////////////////////////////////
 
 for (int i = 1; i < 1; i++)
 {
-	auto barItem = std::make_unique<RenderItem>();
+	//auto barItem = std::make_unique<RenderItem>();
 	//auto boxItem = std::make_unique<RenderItem>();
 	//ten top chocolate
 
@@ -1423,7 +1423,7 @@ for (int i = 1; i < 1; i++)
 	}*/
 	//bottom solid piece
 	auto barRitem = std::make_unique<RenderItem>();
-	XMStoreFloat4x4(&barRitem->World, XMMatrixScaling(2.0f, 0.1f, 2.5f)*XMMatrixTranslation(0.0f, i, 0.0f));
+	XMStoreFloat4x4(&barRitem->World, XMMatrixScaling(1.0f, 1.0f, 1.0f));
 	barRitem->ObjCBIndex = j;
 	barRitem->Geo = mGeometries["shapeGeo"].get();
 	barRitem->PrimitiveType = D3D_PRIMITIVE_TOPOLOGY_TRIANGLELIST;
