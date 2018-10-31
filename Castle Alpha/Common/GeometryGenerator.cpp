@@ -205,131 +205,437 @@ GeometryGenerator::MeshData GeometryGenerator::CreateChocolate(float width, floa
 	float h2 = 0.5f*height;
 	float d2 = 0.5f*depth;
 
-	uint32 i[396];
-
-	int derp = 0;
-	int derp2 = 0;
-
-		for (int g = 0; g < 2; g++)
-		{
-			for (int k = 0; k < 5; k++)
-			{
-				v[0 + derp] = Vertex(-w2, -h2, -d2, 0.0f, 0.0f, -1.0f, 1.0f, 0.0f, 0.0f, 0.0f, 1.0f);
-				v[1 + derp] = Vertex(-w2, +h2, -d2, 0.0f, 0.0f, -1.0f, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f);
-				v[2 + derp] = Vertex(+w2, +h2, -d2, 0.0f, 0.0f, -1.0f, 1.0f, 0.0f, 0.0f, 1.0f, 0.0f);
-				v[3 + derp] = Vertex(+w2, -h2, -d2, 0.0f, 0.0f, -1.0f, 1.0f, 0.0f, 0.0f, 1.0f, 1.0f);
+	//chocolate bottom
+				v[0] = Vertex(-w2, -h2, -d2, 0.0f, 0.0f, -1.0f, 1.0f, 0.0f, 0.0f, 0.0f, 1.0f);
+				v[1] = Vertex(-w2, +h2, -d2, 0.0f, 0.0f, -1.0f, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f);
+				v[2] = Vertex(+w2, +h2, -d2, 0.0f, 0.0f, -1.0f, 1.0f, 0.0f, 0.0f, 1.0f, 0.0f);
+				v[3] = Vertex(+w2, -h2, -d2, 0.0f, 0.0f, -1.0f, 1.0f, 0.0f, 0.0f, 1.0f, 1.0f);
 
 				// Fill in the back face vertex data.
-				v[4 + derp] = Vertex(-w2, -h2, +d2, 0.0f, 0.0f, 1.0f, -1.0f, 0.0f, 0.0f, 1.0f, 1.0f);
-				v[5 + derp] = Vertex(+w2, -h2, +d2, 0.0f, 0.0f, 1.0f, -1.0f, 0.0f, 0.0f, 0.0f, 1.0f);
-				v[6 + derp] = Vertex(+w2, +h2, +d2, 0.0f, 0.0f, 1.0f, -1.0f, 0.0f, 0.0f, 0.0f, 0.0f);
-				v[7 + derp] = Vertex(-w2, +h2, +d2, 0.0f, 0.0f, 1.0f, -1.0f, 0.0f, 0.0f, 1.0f, 0.0f);
+				v[4] = Vertex(-w2, -h2, +d2, 0.0f, 0.0f, 1.0f, -1.0f, 0.0f, 0.0f, 1.0f, 1.0f);
+				v[5] = Vertex(+w2, -h2, +d2, 0.0f, 0.0f, 1.0f, -1.0f, 0.0f, 0.0f, 0.0f, 1.0f);
+				v[6] = Vertex(+w2, +h2, +d2, 0.0f, 0.0f, 1.0f, -1.0f, 0.0f, 0.0f, 0.0f, 0.0f);
+				v[7] = Vertex(-w2, +h2, +d2, 0.0f, 0.0f, 1.0f, -1.0f, 0.0f, 0.0f, 1.0f, 0.0f);
 
 				// Fill in the top face vertex data.
-				v[8 + derp] = Vertex(-w2, +h2, -d2, 0.0f, 1.0f, 0.0f, 1.0f, 0.0f, 0.0f, 0.0f, 1.0f);
-				v[9 + derp] = Vertex(-w2, +h2, +d2, 0.0f, 1.0f, 0.0f, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f);
-				v[10 + derp] = Vertex(+w2, +h2, +d2, 0.0f, 1.0f, 0.0f, 1.0f, 0.0f, 0.0f, 1.0f, 0.0f);
-				v[11 + derp] = Vertex(+w2, +h2, -d2, 0.0f, 1.0f, 0.0f, 1.0f, 0.0f, 0.0f, 1.0f, 1.0f);
+				v[8] = Vertex(-w2, +h2, -d2, 0.0f, 1.0f, 0.0f, 1.0f, 0.0f, 0.0f, 0.0f, 1.0f);
+				v[9] = Vertex(-w2, +h2, +d2, 0.0f, 1.0f, 0.0f, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f);
+				v[10] = Vertex(+w2, +h2, +d2, 0.0f, 1.0f, 0.0f, 1.0f, 0.0f, 0.0f, 1.0f, 0.0f);
+				v[11] = Vertex(+w2, +h2, -d2, 0.0f, 1.0f, 0.0f, 1.0f, 0.0f, 0.0f, 1.0f, 1.0f);
 
 				// Fill in the bottom face vertex data.
-				v[12 + derp] = Vertex(-w2, -h2, -d2, 0.0f, -1.0f, 0.0f, -1.0f, 0.0f, 0.0f, 1.0f, 1.0f);
-				v[13 + derp] = Vertex(+w2, -h2, -d2, 0.0f, -1.0f, 0.0f, -1.0f, 0.0f, 0.0f, 0.0f, 1.0f);
-				v[14 + derp] = Vertex(+w2, -h2, +d2, 0.0f, -1.0f, 0.0f, -1.0f, 0.0f, 0.0f, 0.0f, 0.0f);
-				v[15 + derp] = Vertex(-w2, -h2, +d2, 0.0f, -1.0f, 0.0f, -1.0f, 0.0f, 0.0f, 1.0f, 0.0f);
+				v[12] = Vertex(-w2, -h2, -d2, 0.0f, -1.0f, 0.0f, -1.0f, 0.0f, 0.0f, 1.0f, 1.0f);
+				v[13] = Vertex(+w2, -h2, -d2, 0.0f, -1.0f, 0.0f, -1.0f, 0.0f, 0.0f, 0.0f, 1.0f);
+				v[14] = Vertex(+w2, -h2, +d2, 0.0f, -1.0f, 0.0f, -1.0f, 0.0f, 0.0f, 0.0f, 0.0f);
+				v[15] = Vertex(-w2, -h2, +d2, 0.0f, -1.0f, 0.0f, -1.0f, 0.0f, 0.0f, 1.0f, 0.0f);
 
 				// Fill in the left face vertex data.
-				v[16 + derp] = Vertex(-w2, -h2, +d2, -1.0f, 0.0f, 0.0f, 0.0f, 0.0f, -1.0f, 0.0f, 1.0f);
-				v[17 + derp] = Vertex(-w2, +h2, +d2, -1.0f, 0.0f, 0.0f, 0.0f, 0.0f, -1.0f, 0.0f, 0.0f);
-				v[18 + derp] = Vertex(-w2, +h2, -d2, -1.0f, 0.0f, 0.0f, 0.0f, 0.0f, -1.0f, 1.0f, 0.0f);
-				v[19 + derp] = Vertex(-w2, -h2, -d2, -1.0f, 0.0f, 0.0f, 0.0f, 0.0f, -1.0f, 1.0f, 1.0f);
+				v[16] = Vertex(-w2, -h2, +d2, -1.0f, 0.0f, 0.0f, 0.0f, 0.0f, -1.0f, 0.0f, 1.0f);
+				v[17] = Vertex(-w2, +h2, +d2, -1.0f, 0.0f, 0.0f, 0.0f, 0.0f, -1.0f, 0.0f, 0.0f);
+				v[18] = Vertex(-w2, +h2, -d2, -1.0f, 0.0f, 0.0f, 0.0f, 0.0f, -1.0f, 1.0f, 0.0f);
+				v[19] = Vertex(-w2, -h2, -d2, -1.0f, 0.0f, 0.0f, 0.0f, 0.0f, -1.0f, 1.0f, 1.0f);
 
 				// Fill in the right face vertex data.
-				v[20 + derp] = Vertex(+w2, -h2, -d2, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f, 1.0f);
-				v[21 + derp] = Vertex(+w2, +h2, -d2, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f, 0.0f);
-				v[22 + derp] = Vertex(+w2, +h2, +d2, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 1.0f, 0.0f);
-				v[23 + derp] = Vertex(+w2, -h2, +d2, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 1.0f, 1.0f);
+				v[20] = Vertex(+w2, -h2, -d2, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f, 1.0f);
+				v[21] = Vertex(+w2, +h2, -d2, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f, 0.0f);
+				v[22] = Vertex(+w2, +h2, +d2, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 1.0f, 0.0f);
+				v[23] = Vertex(+w2, -h2, +d2, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 1.0f, 1.0f);
 
-				//meshData.Vertices.assign(&v[0 + derp ], &v[24 + derp]);
+				//chocolate top 1
+				v[24] = Vertex(-w2, -h2, -d2, 0.0f, 0.0f, -1.0f, 1.0f, 0.0f, 0.0f, 0.0f, 1.0f);
+				v[25] = Vertex(-w2 * 0.9f, +h2 * 0.9f, 0.9f * -d2, 0.0f, 0.0f, -1.0f, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f);
+				v[26] = Vertex(+w2 * 0.9f, +h2 * 0.9f, 0.9f * -d2, 0.0f, 0.0f, -1.0f, 1.0f, 0.0f, 0.0f, 1.0f, 0.0f);
+				v[27] = Vertex(+w2, -h2, -d2, 0.0f, 0.0f, -1.0f, 1.0f, 0.0f, 0.0f, 1.0f, 1.0f);
 
-				//
-				// Create the indices.
-				//
+				// Fill in the back face vertex data.
+				v[28] = Vertex(-w2, -h2, +d2, 0.0f, 0.0f, 1.0f, -1.0f, 0.0f, 0.0f, 1.0f, 1.0f);
+				v[29] = Vertex(+w2, -h2, +d2, 0.0f, 0.0f, 1.0f, -1.0f, 0.0f, 0.0f, 0.0f, 1.0f);
+				v[30] = Vertex(+w2 * 0.9f, +h2 * 0.9f, 0.9f * +d2, 0.0f, 0.0f, 1.0f, -1.0f, 0.0f, 0.0f, 0.0f, 0.0f);
+				v[31] = Vertex(-w2 * 0.9f, +h2 * 0.9f, 0.9f * +d2, 0.0f, 0.0f, 1.0f, -1.0f, 0.0f, 0.0f, 1.0f, 0.0f);
 
-				//uint32 i[36];
+				// Fill in the top face vertex data.
+				v[32] = Vertex(-w2 * 0.9f, +h2 * 0.9f, 0.9f * -d2, 0.0f, 1.0f, 0.0f, 1.0f, 0.0f, 0.0f, 0.0f, 1.0f);
+				v[33] = Vertex(-w2 * 0.9f, +h2 * 0.9f, 0.9f * +d2, 0.0f, 1.0f, 0.0f, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f);
+				v[34] = Vertex(+w2 * 0.9f, +h2 * 0.9f, 0.9f * +d2, 0.0f, 1.0f, 0.0f, 1.0f, 0.0f, 0.0f, 1.0f, 0.0f);
+				v[35] = Vertex(+w2 * 0.9f, +h2 * 0.9f, 0.9f * -d2, 0.0f, 1.0f, 0.0f, 1.0f, 0.0f, 0.0f, 1.0f, 1.0f);
 
-				// Fill in the front face index data
-				i[0 + derp2] = 0; i[1 + derp2] = 1; i[2 + derp2] = 2;
-				i[3 + derp2] = 0; i[4 + derp2] = 2; i[5 + derp2] = 3;
+				// Fill in the bottom face vertex data.
+				v[36] = Vertex(-w2, -h2, -d2, 0.0f, -1.0f, 0.0f, -1.0f, 0.0f, 0.0f, 1.0f, 1.0f);
+				v[37] = Vertex(+w2, -h2, -d2, 0.0f, -1.0f, 0.0f, -1.0f, 0.0f, 0.0f, 0.0f, 1.0f);
+				v[38] = Vertex(+w2, -h2, +d2, 0.0f, -1.0f, 0.0f, -1.0f, 0.0f, 0.0f, 0.0f, 0.0f);
+				v[39] = Vertex(-w2, -h2, +d2, 0.0f, -1.0f, 0.0f, -1.0f, 0.0f, 0.0f, 1.0f, 0.0f);
 
-				// Fill in the back face index data
-				i[6 + derp2] = 4; i[7 + derp2] = 5; i[8 + derp2] = 6;
-				i[9 + derp2] = 4; i[10 + derp2] = 6; i[11 + derp2] = 7;
+				// Fill in the left face vertex data.
+				v[40] = Vertex(-w2, -h2, +d2, -1.0f, 0.0f, 0.0f, 0.0f, 0.0f, -1.0f, 0.0f, 1.0f);
+				v[41] = Vertex(-w2 * 0.9f, +h2 * 0.9f, 0.9f * +d2, -1.0f, 0.0f, 0.0f, 0.0f, 0.0f, -1.0f, 0.0f, 0.0f);
+				v[42] = Vertex(-w2 * 0.9f, +h2 * 0.9f, 0.9f * -d2, -1.0f, 0.0f, 0.0f, 0.0f, 0.0f, -1.0f, 1.0f, 0.0f);
+				v[43] = Vertex(-w2, -h2, -d2, -1.0f, 0.0f, 0.0f, 0.0f, 0.0f, -1.0f, 1.0f, 1.0f);
 
-				// Fill in the top face index data
-				i[12 + derp2] = 8; i[13 + derp2] = 9; i[14 + derp2] = 10;
-				i[15 + derp2] = 8; i[16 + derp2] = 10; i[17 + derp2] = 11;
+				// Fill in the right face vertex data.
+				v[44] = Vertex(+w2, -h2, -d2, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f, 1.0f);
+				v[45] = Vertex(+w2 * 0.9f, +h2 * 0.9f, 0.9f * -d2, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f, 0.0f);
+				v[46] = Vertex(+w2 * 0.9f, +h2 * 0.9f, 0.9f * +d2, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 1.0f, 0.0f);
+				v[47] = Vertex(+w2, -h2, +d2, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 1.0f, 1.0f);
 
-				// Fill in the bottom face index data
-				i[18 + derp2] = 12; i[19 + derp2] = 13; i[20 + derp2] = 14;
-				i[21 + derp2] = 12; i[22 + derp2] = 14; i[23 + derp2] = 15;
+				//chocolate top 2
+				v[48] = Vertex(-w2, -h2, -d2, 0.0f, 0.0f, -1.0f, 1.0f, 0.0f, 0.0f, 0.0f, 1.0f);
+				v[49] = Vertex(-w2 * 0.9f, +h2 * 0.9f, 0.9f * -d2, 0.0f, 0.0f, -1.0f, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f);
+				v[50] = Vertex(+w2 * 0.9f, +h2 * 0.9f, 0.9f * -d2, 0.0f, 0.0f, -1.0f, 1.0f, 0.0f, 0.0f, 1.0f, 0.0f);
+				v[51] = Vertex(+w2, -h2, -d2, 0.0f, 0.0f, -1.0f, 1.0f, 0.0f, 0.0f, 1.0f, 1.0f);
 
-				// Fill in the left face index data
-				i[24 + derp2] = 16; i[25 + derp2] = 17; i[26 + derp2] = 18;
-				i[27 + derp2] = 16; i[28 + derp2] = 18; i[29 + derp2] = 19;
+				// Fill in the back face vertex data.
+				v[52] = Vertex(-w2, -h2, +d2, 0.0f, 0.0f, 1.0f, -1.0f, 0.0f, 0.0f, 1.0f, 1.0f);
+				v[53] = Vertex(+w2, -h2, +d2, 0.0f, 0.0f, 1.0f, -1.0f, 0.0f, 0.0f, 0.0f, 1.0f);
+				v[54] = Vertex(+w2 * 0.9f, +h2 * 0.9f, 0.9f * +d2, 0.0f, 0.0f, 1.0f, -1.0f, 0.0f, 0.0f, 0.0f, 0.0f);
+				v[55] = Vertex(-w2 * 0.9f, +h2 * 0.9f, 0.9f * +d2, 0.0f, 0.0f, 1.0f, -1.0f, 0.0f, 0.0f, 1.0f, 0.0f);
 
-				// Fill in the right face index data
-				i[30 + derp2] = 20; i[31 + derp2] = 21; i[32 + derp2] = 22;
-				i[33 + derp2] = 20; i[34 + derp2] = 22; i[35 + derp2] = 23;
+				// Fill in the top face vertex data.
+				v[56] = Vertex(-w2 * 0.9f, +h2 * 0.9f, 0.9f * -d2, 0.0f, 1.0f, 0.0f, 1.0f, 0.0f, 0.0f, 0.0f, 1.0f);
+				v[57] = Vertex(-w2 * 0.9f, +h2 * 0.9f, 0.9f * +d2, 0.0f, 1.0f, 0.0f, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f);
+				v[58] = Vertex(+w2 * 0.9f, +h2 * 0.9f, 0.9f * +d2, 0.0f, 1.0f, 0.0f, 1.0f, 0.0f, 0.0f, 1.0f, 0.0f);
+				v[59] = Vertex(+w2 * 0.9f, +h2 * 0.9f, 0.9f * -d2, 0.0f, 1.0f, 0.0f, 1.0f, 0.0f, 0.0f, 1.0f, 1.0f);
 
-			//	meshData.Indices32.assign(&i[0 +derp2], &i[36 +derp2]);
+				// Fill in the bottom face vertex data.
+				v[60] = Vertex(-w2, -h2, -d2, 0.0f, -1.0f, 0.0f, -1.0f, 0.0f, 0.0f, 1.0f, 1.0f);
+				v[61] = Vertex(+w2, -h2, -d2, 0.0f, -1.0f, 0.0f, -1.0f, 0.0f, 0.0f, 0.0f, 1.0f);
+				v[62] = Vertex(+w2, -h2, +d2, 0.0f, -1.0f, 0.0f, -1.0f, 0.0f, 0.0f, 0.0f, 0.0f);
+				v[63] = Vertex(-w2, -h2, +d2, 0.0f, -1.0f, 0.0f, -1.0f, 0.0f, 0.0f, 1.0f, 0.0f);
+
+				// Fill in the left face vertex data.
+				v[64] = Vertex(-w2, -h2, +d2, -1.0f, 0.0f, 0.0f, 0.0f, 0.0f, -1.0f, 0.0f, 1.0f);
+				v[65] = Vertex(-w2 * 0.9f, +h2 * 0.9f, 0.9f * +d2, -1.0f, 0.0f, 0.0f, 0.0f, 0.0f, -1.0f, 0.0f, 0.0f);
+				v[66] = Vertex(-w2 * 0.9f, +h2 * 0.9f, 0.9f * -d2, -1.0f, 0.0f, 0.0f, 0.0f, 0.0f, -1.0f, 1.0f, 0.0f);
+				v[67] = Vertex(-w2, -h2, -d2, -1.0f, 0.0f, 0.0f, 0.0f, 0.0f, -1.0f, 1.0f, 1.0f);
+
+				// Fill in the right face vertex data.
+				v[68] = Vertex(+w2, -h2, -d2, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f, 1.0f);
+				v[69] = Vertex(+w2 * 0.9f, +h2 * 0.9f, 0.9f * -d2, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f, 0.0f);
+				v[70] = Vertex(+w2 * 0.9f, +h2 * 0.9f, 0.9f * +d2, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 1.0f, 0.0f);
+				v[71] = Vertex(+w2, -h2, +d2, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 1.0f, 1.0f);
+
+				//chocolate top 3
+				v[72] = Vertex(-w2, -h2, -d2, 0.0f, 0.0f, -1.0f, 1.0f, 0.0f, 0.0f, 0.0f, 1.0f);
+				v[73] = Vertex(-w2 * 0.9f, +h2 * 0.9f, 0.9f * -d2, 0.0f, 0.0f, -1.0f, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f);
+				v[74] = Vertex(+w2 * 0.9f, +h2 * 0.9f, 0.9f * -d2, 0.0f, 0.0f, -1.0f, 1.0f, 0.0f, 0.0f, 1.0f, 0.0f);
+				v[75] = Vertex(+w2, -h2, -d2, 0.0f, 0.0f, -1.0f, 1.0f, 0.0f, 0.0f, 1.0f, 1.0f);
+
+				// Fill in the back face vertex data.
+				v[76] = Vertex(-w2, -h2, +d2, 0.0f, 0.0f, 1.0f, -1.0f, 0.0f, 0.0f, 1.0f, 1.0f);
+				v[77] = Vertex(+w2, -h2, +d2, 0.0f, 0.0f, 1.0f, -1.0f, 0.0f, 0.0f, 0.0f, 1.0f);
+				v[78] = Vertex(+w2 * 0.9f, +h2 * 0.9f, 0.9f * +d2, 0.0f, 0.0f, 1.0f, -1.0f, 0.0f, 0.0f, 0.0f, 0.0f);
+				v[79] = Vertex(-w2 * 0.9f, +h2 * 0.9f, 0.9f * +d2, 0.0f, 0.0f, 1.0f, -1.0f, 0.0f, 0.0f, 1.0f, 0.0f);
+
+				// Fill in the top face vertex data.
+				v[80] = Vertex(-w2 * 0.9f, +h2 * 0.9f, 0.9f * -d2, 0.0f, 1.0f, 0.0f, 1.0f, 0.0f, 0.0f, 0.0f, 1.0f);
+				v[81] = Vertex(-w2 * 0.9f, +h2 * 0.9f, 0.9f * +d2, 0.0f, 1.0f, 0.0f, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f);
+				v[82] = Vertex(+w2 * 0.9f, +h2 * 0.9f, 0.9f * +d2, 0.0f, 1.0f, 0.0f, 1.0f, 0.0f, 0.0f, 1.0f, 0.0f);
+				v[83] = Vertex(+w2 * 0.9f, +h2 * 0.9f, 0.9f * -d2, 0.0f, 1.0f, 0.0f, 1.0f, 0.0f, 0.0f, 1.0f, 1.0f);
+
+				// Fill in the bottom face vertex data.
+				v[84] = Vertex(-w2, -h2, -d2, 0.0f, -1.0f, 0.0f, -1.0f, 0.0f, 0.0f, 1.0f, 1.0f);
+				v[85] = Vertex(+w2, -h2, -d2, 0.0f, -1.0f, 0.0f, -1.0f, 0.0f, 0.0f, 0.0f, 1.0f);
+				v[86] = Vertex(+w2, -h2, +d2, 0.0f, -1.0f, 0.0f, -1.0f, 0.0f, 0.0f, 0.0f, 0.0f);
+				v[87] = Vertex(-w2, -h2, +d2, 0.0f, -1.0f, 0.0f, -1.0f, 0.0f, 0.0f, 1.0f, 0.0f);
+
+				// Fill in the left face vertex data.
+				v[88] = Vertex(-w2, -h2, +d2, -1.0f, 0.0f, 0.0f, 0.0f, 0.0f, -1.0f, 0.0f, 1.0f);
+				v[89] = Vertex(-w2 * 0.9f, +h2 * 0.9f, 0.9f * +d2, -1.0f, 0.0f, 0.0f, 0.0f, 0.0f, -1.0f, 0.0f, 0.0f);
+				v[90] = Vertex(-w2 * 0.9f, +h2 * 0.9f, 0.9f * -d2, -1.0f, 0.0f, 0.0f, 0.0f, 0.0f, -1.0f, 1.0f, 0.0f);
+				v[91] = Vertex(-w2, -h2, -d2, -1.0f, 0.0f, 0.0f, 0.0f, 0.0f, -1.0f, 1.0f, 1.0f);
+
+				// Fill in the right face vertex data.
+				v[92] = Vertex(+w2, -h2, -d2, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f, 1.0f);
+				v[93] = Vertex(+w2 * 0.9f, +h2 * 0.9f, 0.9f * -d2, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f, 0.0f);
+				v[94] = Vertex(+w2 * 0.9f, +h2 * 0.9f, 0.9f * +d2, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 1.0f, 0.0f);
+				v[95] = Vertex(+w2, -h2, +d2, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 1.0f, 1.0f);
+
+				//chocolate top 4
+				v[96] = Vertex(-w2, -h2, -d2, 0.0f, 0.0f, -1.0f, 1.0f, 0.0f, 0.0f, 0.0f, 1.0f);
+				v[97] = Vertex(-w2 * 0.9f, +h2 * 0.9f, 0.9f * -d2, 0.0f, 0.0f, -1.0f, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f);
+				v[98] = Vertex(+w2 * 0.9f, +h2 * 0.9f, 0.9f * -d2, 0.0f, 0.0f, -1.0f, 1.0f, 0.0f, 0.0f, 1.0f, 0.0f);
+				v[99] = Vertex(+w2, -h2, -d2, 0.0f, 0.0f, -1.0f, 1.0f, 0.0f, 0.0f, 1.0f, 1.0f);
+
+				// Fill in the back face vertex data.
+				v[100] = Vertex(-w2, -h2, +d2, 0.0f, 0.0f, 1.0f, -1.0f, 0.0f, 0.0f, 1.0f, 1.0f);
+				v[101] = Vertex(+w2, -h2, +d2, 0.0f, 0.0f, 1.0f, -1.0f, 0.0f, 0.0f, 0.0f, 1.0f);
+				v[102] = Vertex(+w2 * 0.9f, +h2 * 0.9f, 0.9f * +d2, 0.0f, 0.0f, 1.0f, -1.0f, 0.0f, 0.0f, 0.0f, 0.0f);
+				v[103] = Vertex(-w2 * 0.9f, +h2 * 0.9f, 0.9f * +d2, 0.0f, 0.0f, 1.0f, -1.0f, 0.0f, 0.0f, 1.0f, 0.0f);
+
+				// Fill in the top face vertex data.
+				v[104] = Vertex(-w2 * 0.9f, +h2 * 0.9f, 0.9f * -d2, 0.0f, 1.0f, 0.0f, 1.0f, 0.0f, 0.0f, 0.0f, 1.0f);
+				v[105] = Vertex(-w2 * 0.9f, +h2 * 0.9f, 0.9f * +d2, 0.0f, 1.0f, 0.0f, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f);
+				v[106] = Vertex(+w2 * 0.9f, +h2 * 0.9f, 0.9f * +d2, 0.0f, 1.0f, 0.0f, 1.0f, 0.0f, 0.0f, 1.0f, 0.0f);
+				v[107] = Vertex(+w2 * 0.9f, +h2 * 0.9f, 0.9f * -d2, 0.0f, 1.0f, 0.0f, 1.0f, 0.0f, 0.0f, 1.0f, 1.0f);
+
+				// Fill in the bottom face vertex data.
+				v[108] = Vertex(-w2, -h2, -d2, 0.0f, -1.0f, 0.0f, -1.0f, 0.0f, 0.0f, 1.0f, 1.0f);
+				v[109] = Vertex(+w2, -h2, -d2, 0.0f, -1.0f, 0.0f, -1.0f, 0.0f, 0.0f, 0.0f, 1.0f);
+				v[110] = Vertex(+w2, -h2, +d2, 0.0f, -1.0f, 0.0f, -1.0f, 0.0f, 0.0f, 0.0f, 0.0f);
+				v[111] = Vertex(-w2, -h2, +d2, 0.0f, -1.0f, 0.0f, -1.0f, 0.0f, 0.0f, 1.0f, 0.0f);
+
+				// Fill in the left face vertex data.
+				v[112] = Vertex(-w2, -h2, +d2, -1.0f, 0.0f, 0.0f, 0.0f, 0.0f, -1.0f, 0.0f, 1.0f);
+				v[113] = Vertex(-w2 * 0.9f, +h2 * 0.9f, 0.9f * +d2, -1.0f, 0.0f, 0.0f, 0.0f, 0.0f, -1.0f, 0.0f, 0.0f);
+				v[114] = Vertex(-w2 * 0.9f, +h2 * 0.9f, 0.9f * -d2, -1.0f, 0.0f, 0.0f, 0.0f, 0.0f, -1.0f, 1.0f, 0.0f);
+				v[115] = Vertex(-w2, -h2, -d2, -1.0f, 0.0f, 0.0f, 0.0f, 0.0f, -1.0f, 1.0f, 1.0f);
+
+				// Fill in the right face vertex data.
+				v[116] = Vertex(+w2, -h2, -d2, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f, 1.0f);
+				v[117] = Vertex(+w2 * 0.9f, +h2 * 0.9f, 0.9f * -d2, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f, 0.0f);
+				v[118] = Vertex(+w2 * 0.9f, +h2 * 0.9f, 0.9f * +d2, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 1.0f, 0.0f);
+				v[119] = Vertex(+w2, -h2, +d2, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 1.0f, 1.0f);
+
+				//chocolate top 5
+				v[120] = Vertex(-w2, -h2, -d2, 0.0f, 0.0f, -1.0f, 1.0f, 0.0f, 0.0f, 0.0f, 1.0f);
+				v[121] = Vertex(-w2 * 0.9f, +h2 * 0.9f, 0.9f * -d2, 0.0f, 0.0f, -1.0f, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f);
+				v[122] = Vertex(+w2 * 0.9f, +h2 * 0.9f, 0.9f * -d2, 0.0f, 0.0f, -1.0f, 1.0f, 0.0f, 0.0f, 1.0f, 0.0f);
+				v[123] = Vertex(+w2, -h2, -d2, 0.0f, 0.0f, -1.0f, 1.0f, 0.0f, 0.0f, 1.0f, 1.0f);
+
+				// Fill in the back face vertex data.
+				v[124] = Vertex(-w2, -h2, +d2, 0.0f, 0.0f, 1.0f, -1.0f, 0.0f, 0.0f, 1.0f, 1.0f);
+				v[125] = Vertex(+w2, -h2, +d2, 0.0f, 0.0f, 1.0f, -1.0f, 0.0f, 0.0f, 0.0f, 1.0f);
+				v[126] = Vertex(+w2 * 0.9f, +h2 * 0.9f, 0.9f * +d2, 0.0f, 0.0f, 1.0f, -1.0f, 0.0f, 0.0f, 0.0f, 0.0f);
+				v[127] = Vertex(-w2 * 0.9f, +h2 * 0.9f, 0.9f * +d2, 0.0f, 0.0f, 1.0f, -1.0f, 0.0f, 0.0f, 1.0f, 0.0f);
+
+				// Fill in the top face vertex data.
+				v[128] = Vertex(-w2 * 0.9f, +h2 * 0.9f, 0.9f * -d2, 0.0f, 1.0f, 0.0f, 1.0f, 0.0f, 0.0f, 0.0f, 1.0f);
+				v[129] = Vertex(-w2 * 0.9f, +h2 * 0.9f, 0.9f * +d2, 0.0f, 1.0f, 0.0f, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f);
+				v[130] = Vertex(+w2 * 0.9f, +h2 * 0.9f, 0.9f * +d2, 0.0f, 1.0f, 0.0f, 1.0f, 0.0f, 0.0f, 1.0f, 0.0f);
+				v[131] = Vertex(+w2 * 0.9f, +h2 * 0.9f, 0.9f * -d2, 0.0f, 1.0f, 0.0f, 1.0f, 0.0f, 0.0f, 1.0f, 1.0f);
+
+				// Fill in the bottom face vertex data.
+				v[132] = Vertex(-w2, -h2, -d2, 0.0f, -1.0f, 0.0f, -1.0f, 0.0f, 0.0f, 1.0f, 1.0f);
+				v[133] = Vertex(+w2, -h2, -d2, 0.0f, -1.0f, 0.0f, -1.0f, 0.0f, 0.0f, 0.0f, 1.0f);
+				v[134] = Vertex(+w2, -h2, +d2, 0.0f, -1.0f, 0.0f, -1.0f, 0.0f, 0.0f, 0.0f, 0.0f);
+				v[135] = Vertex(-w2, -h2, +d2, 0.0f, -1.0f, 0.0f, -1.0f, 0.0f, 0.0f, 1.0f, 0.0f);
+
+				// Fill in the left face vertex data.
+				v[136] = Vertex(-w2, -h2, +d2, -1.0f, 0.0f, 0.0f, 0.0f, 0.0f, -1.0f, 0.0f, 1.0f);
+				v[137] = Vertex(-w2 * 0.9f, +h2 * 0.9f, 0.9f * +d2, -1.0f, 0.0f, 0.0f, 0.0f, 0.0f, -1.0f, 0.0f, 0.0f);
+				v[138] = Vertex(-w2 * 0.9f, +h2 * 0.9f, 0.9f * -d2, -1.0f, 0.0f, 0.0f, 0.0f, 0.0f, -1.0f, 1.0f, 0.0f);
+				v[139] = Vertex(-w2, -h2, -d2, -1.0f, 0.0f, 0.0f, 0.0f, 0.0f, -1.0f, 1.0f, 1.0f);
+
+				// Fill in the right face vertex data.
+				v[140] = Vertex(+w2, -h2, -d2, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f, 1.0f);
+				v[141] = Vertex(+w2 * 0.9f, +h2 * 0.9f, 0.9f * -d2, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f, 0.0f);
+				v[142] = Vertex(+w2 * 0.9f, +h2 * 0.9f, 0.9f * +d2, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 1.0f, 0.0f);
+				v[143] = Vertex(+w2, -h2, +d2, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 1.0f, 1.0f);
+
+				//chocolate top 6
+				v[144] = Vertex(-w2, -h2, -d2, 0.0f, 0.0f, -1.0f, 1.0f, 0.0f, 0.0f, 0.0f, 1.0f);
+				v[145] = Vertex(-w2 * 0.9f, +h2 * 0.9f, 0.9f * -d2, 0.0f, 0.0f, -1.0f, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f);
+				v[146] = Vertex(+w2 * 0.9f, +h2 * 0.9f, 0.9f * -d2, 0.0f, 0.0f, -1.0f, 1.0f, 0.0f, 0.0f, 1.0f, 0.0f);
+				v[147] = Vertex(+w2, -h2, -d2, 0.0f, 0.0f, -1.0f, 1.0f, 0.0f, 0.0f, 1.0f, 1.0f);
+
+				// Fill in the back face vertex data.
+				v[148] = Vertex(-w2, -h2, +d2, 0.0f, 0.0f, 1.0f, -1.0f, 0.0f, 0.0f, 1.0f, 1.0f);
+				v[149] = Vertex(+w2, -h2, +d2, 0.0f, 0.0f, 1.0f, -1.0f, 0.0f, 0.0f, 0.0f, 1.0f);
+				v[150] = Vertex(+w2 * 0.9f, +h2 * 0.9f, 0.9f * +d2, 0.0f, 0.0f, 1.0f, -1.0f, 0.0f, 0.0f, 0.0f, 0.0f);
+				v[151] = Vertex(-w2 * 0.9f, +h2 * 0.9f, 0.9f * +d2, 0.0f, 0.0f, 1.0f, -1.0f, 0.0f, 0.0f, 1.0f, 0.0f);
+
+				// Fill in the top face vertex data.
+				v[152] = Vertex(-w2 * 0.9f, +h2 * 0.9f, 0.9f * -d2, 0.0f, 1.0f, 0.0f, 1.0f, 0.0f, 0.0f, 0.0f, 1.0f);
+				v[153] = Vertex(-w2 * 0.9f, +h2 * 0.9f, 0.9f * +d2, 0.0f, 1.0f, 0.0f, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f);
+				v[154] = Vertex(+w2 * 0.9f, +h2 * 0.9f, 0.9f * +d2, 0.0f, 1.0f, 0.0f, 1.0f, 0.0f, 0.0f, 1.0f, 0.0f);
+				v[155] = Vertex(+w2 * 0.9f, +h2 * 0.9f, 0.9f * -d2, 0.0f, 1.0f, 0.0f, 1.0f, 0.0f, 0.0f, 1.0f, 1.0f);
+
+				// Fill in the bottom face vertex data.
+				v[156] = Vertex(-w2, -h2, -d2, 0.0f, -1.0f, 0.0f, -1.0f, 0.0f, 0.0f, 1.0f, 1.0f);
+				v[157] = Vertex(+w2, -h2, -d2, 0.0f, -1.0f, 0.0f, -1.0f, 0.0f, 0.0f, 0.0f, 1.0f);
+				v[158] = Vertex(+w2, -h2, +d2, 0.0f, -1.0f, 0.0f, -1.0f, 0.0f, 0.0f, 0.0f, 0.0f);
+				v[159] = Vertex(-w2, -h2, +d2, 0.0f, -1.0f, 0.0f, -1.0f, 0.0f, 0.0f, 1.0f, 0.0f);
+
+				// Fill in the left face vertex data.
+				v[160] = Vertex(-w2, -h2, +d2, -1.0f, 0.0f, 0.0f, 0.0f, 0.0f, -1.0f, 0.0f, 1.0f);
+				v[161] = Vertex(-w2 * 0.9f, +h2 * 0.9f, 0.9f * +d2, -1.0f, 0.0f, 0.0f, 0.0f, 0.0f, -1.0f, 0.0f, 0.0f);
+				v[162] = Vertex(-w2 * 0.9f, +h2 * 0.9f, 0.9f * -d2, -1.0f, 0.0f, 0.0f, 0.0f, 0.0f, -1.0f, 1.0f, 0.0f);
+				v[163] = Vertex(-w2, -h2, -d2, -1.0f, 0.0f, 0.0f, 0.0f, 0.0f, -1.0f, 1.0f, 1.0f);
+
+				// Fill in the right face vertex data.
+				v[164] = Vertex(+w2, -h2, -d2, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f, 1.0f);
+				v[165] = Vertex(+w2 * 0.9f, +h2 * 0.9f, 0.9f * -d2, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f, 0.0f);
+				v[166] = Vertex(+w2 * 0.9f, +h2 * 0.9f, 0.9f * +d2, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 1.0f, 0.0f);
+				v[167] = Vertex(+w2, -h2, +d2, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 1.0f, 1.0f);
+
+				//chocolate top 7
+				v[168] = Vertex(-w2, -h2, -d2, 0.0f, 0.0f, -1.0f, 1.0f, 0.0f, 0.0f, 0.0f, 1.0f);
+				v[169] = Vertex(-w2 * 0.9f, +h2 * 0.9f, 0.9f * -d2, 0.0f, 0.0f, -1.0f, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f);
+				v[170] = Vertex(+w2 * 0.9f, +h2 * 0.9f, 0.9f * -d2, 0.0f, 0.0f, -1.0f, 1.0f, 0.0f, 0.0f, 1.0f, 0.0f);
+				v[171] = Vertex(+w2, -h2, -d2, 0.0f, 0.0f, -1.0f, 1.0f, 0.0f, 0.0f, 1.0f, 1.0f);
+
+				// Fill in the back face vertex data.
+				v[172] = Vertex(-w2, -h2, +d2, 0.0f, 0.0f, 1.0f, -1.0f, 0.0f, 0.0f, 1.0f, 1.0f);
+				v[173] = Vertex(+w2, -h2, +d2, 0.0f, 0.0f, 1.0f, -1.0f, 0.0f, 0.0f, 0.0f, 1.0f);
+				v[174] = Vertex(+w2 * 0.9f, +h2 * 0.9f, 0.9f * +d2, 0.0f, 0.0f, 1.0f, -1.0f, 0.0f, 0.0f, 0.0f, 0.0f);
+				v[175] = Vertex(-w2 * 0.9f, +h2 * 0.9f, 0.9f * +d2, 0.0f, 0.0f, 1.0f, -1.0f, 0.0f, 0.0f, 1.0f, 0.0f);
+
+				// Fill in the top face vertex data.
+				v[176] = Vertex(-w2 * 0.9f, +h2 * 0.9f, 0.9f * -d2, 0.0f, 1.0f, 0.0f, 1.0f, 0.0f, 0.0f, 0.0f, 1.0f);
+				v[177] = Vertex(-w2 * 0.9f, +h2 * 0.9f, 0.9f * +d2, 0.0f, 1.0f, 0.0f, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f);
+				v[178] = Vertex(+w2 * 0.9f, +h2 * 0.9f, 0.9f * +d2, 0.0f, 1.0f, 0.0f, 1.0f, 0.0f, 0.0f, 1.0f, 0.0f);
+				v[179] = Vertex(+w2 * 0.9f, +h2 * 0.9f, 0.9f * -d2, 0.0f, 1.0f, 0.0f, 1.0f, 0.0f, 0.0f, 1.0f, 1.0f);
+
+				// Fill in the bottom face vertex data.
+				v[180] = Vertex(-w2, -h2, -d2, 0.0f, -1.0f, 0.0f, -1.0f, 0.0f, 0.0f, 1.0f, 1.0f);
+				v[181] = Vertex(+w2, -h2, -d2, 0.0f, -1.0f, 0.0f, -1.0f, 0.0f, 0.0f, 0.0f, 1.0f);
+				v[182] = Vertex(+w2, -h2, +d2, 0.0f, -1.0f, 0.0f, -1.0f, 0.0f, 0.0f, 0.0f, 0.0f);
+				v[183] = Vertex(-w2, -h2, +d2, 0.0f, -1.0f, 0.0f, -1.0f, 0.0f, 0.0f, 1.0f, 0.0f);
+
+				// Fill in the left face vertex data.
+				v[184] = Vertex(-w2, -h2, +d2, -1.0f, 0.0f, 0.0f, 0.0f, 0.0f, -1.0f, 0.0f, 1.0f);
+				v[185] = Vertex(-w2 * 0.9f, +h2 * 0.9f, 0.9f * +d2, -1.0f, 0.0f, 0.0f, 0.0f, 0.0f, -1.0f, 0.0f, 0.0f);
+				v[186] = Vertex(-w2 * 0.9f, +h2 * 0.9f, 0.9f * -d2, -1.0f, 0.0f, 0.0f, 0.0f, 0.0f, -1.0f, 1.0f, 0.0f);
+				v[187] = Vertex(-w2, -h2, -d2, -1.0f, 0.0f, 0.0f, 0.0f, 0.0f, -1.0f, 1.0f, 1.0f);
+
+				// Fill in the right face vertex data.
+				v[188] = Vertex(+w2, -h2, -d2, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f, 1.0f);
+				v[189] = Vertex(+w2 * 0.9f, +h2 * 0.9f, 0.9f * -d2, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f, 0.0f);
+				v[190] = Vertex(+w2 * 0.9f, +h2 * 0.9f, 0.9f * +d2, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 1.0f, 0.0f);
+				v[191] = Vertex(+w2, -h2, +d2, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 1.0f, 1.0f);
+
+				//chocolate top 8
+				v[192] = Vertex(-w2, -h2, -d2, 0.0f, 0.0f, -1.0f, 1.0f, 0.0f, 0.0f, 0.0f, 1.0f);
+				v[193] = Vertex(-w2 * 0.9f, +h2 * 0.9f, 0.9f * -d2, 0.0f, 0.0f, -1.0f, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f);
+				v[194] = Vertex(+w2 * 0.9f, +h2 * 0.9f, 0.9f * -d2, 0.0f, 0.0f, -1.0f, 1.0f, 0.0f, 0.0f, 1.0f, 0.0f);
+				v[195] = Vertex(+w2, -h2, -d2, 0.0f, 0.0f, -1.0f, 1.0f, 0.0f, 0.0f, 1.0f, 1.0f);
+
+				// Fill in the back face vertex data.
+				v[196] = Vertex(-w2, -h2, +d2, 0.0f, 0.0f, 1.0f, -1.0f, 0.0f, 0.0f, 1.0f, 1.0f);
+				v[197] = Vertex(+w2, -h2, +d2, 0.0f, 0.0f, 1.0f, -1.0f, 0.0f, 0.0f, 0.0f, 1.0f);
+				v[198] = Vertex(+w2 * 0.9f, +h2 * 0.9f, 0.9f * +d2, 0.0f, 0.0f, 1.0f, -1.0f, 0.0f, 0.0f, 0.0f, 0.0f);
+				v[199] = Vertex(-w2 * 0.9f, +h2 * 0.9f, 0.9f * +d2, 0.0f, 0.0f, 1.0f, -1.0f, 0.0f, 0.0f, 1.0f, 0.0f);
+
+				// Fill in the top face vertex data.
+				v[200] = Vertex(-w2 * 0.9f, +h2 * 0.9f, 0.9f * -d2, 0.0f, 1.0f, 0.0f, 1.0f, 0.0f, 0.0f, 0.0f, 1.0f);
+				v[201] = Vertex(-w2 * 0.9f, +h2 * 0.9f, 0.9f * +d2, 0.0f, 1.0f, 0.0f, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f);
+				v[202] = Vertex(+w2 * 0.9f, +h2 * 0.9f, 0.9f * +d2, 0.0f, 1.0f, 0.0f, 1.0f, 0.0f, 0.0f, 1.0f, 0.0f);
+				v[203] = Vertex(+w2 * 0.9f, +h2 * 0.9f, 0.9f * -d2, 0.0f, 1.0f, 0.0f, 1.0f, 0.0f, 0.0f, 1.0f, 1.0f);
+
+				// Fill in the bottom face vertex data.
+				v[204] = Vertex(-w2, -h2, -d2, 0.0f, -1.0f, 0.0f, -1.0f, 0.0f, 0.0f, 1.0f, 1.0f);
+				v[205] = Vertex(+w2, -h2, -d2, 0.0f, -1.0f, 0.0f, -1.0f, 0.0f, 0.0f, 0.0f, 1.0f);
+				v[206] = Vertex(+w2, -h2, +d2, 0.0f, -1.0f, 0.0f, -1.0f, 0.0f, 0.0f, 0.0f, 0.0f);
+				v[207] = Vertex(-w2, -h2, +d2, 0.0f, -1.0f, 0.0f, -1.0f, 0.0f, 0.0f, 1.0f, 0.0f);
+
+				// Fill in the left face vertex data.
+				v[208] = Vertex(-w2, -h2, +d2, -1.0f, 0.0f, 0.0f, 0.0f, 0.0f, -1.0f, 0.0f, 1.0f);
+				v[209] = Vertex(-w2 * 0.9f, +h2 * 0.9f, 0.9f * +d2, -1.0f, 0.0f, 0.0f, 0.0f, 0.0f, -1.0f, 0.0f, 0.0f);
+				v[210] = Vertex(-w2 * 0.9f, +h2 * 0.9f, 0.9f * -d2, -1.0f, 0.0f, 0.0f, 0.0f, 0.0f, -1.0f, 1.0f, 0.0f);
+				v[211] = Vertex(-w2, -h2, -d2, -1.0f, 0.0f, 0.0f, 0.0f, 0.0f, -1.0f, 1.0f, 1.0f);
+
+				// Fill in the right face vertex data.
+				v[212] = Vertex(+w2, -h2, -d2, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f, 1.0f);
+				v[213] = Vertex(+w2 * 0.9f, +h2 * 0.9f, 0.9f * -d2, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f, 0.0f);
+				v[214] = Vertex(+w2 * 0.9f, +h2 * 0.9f, 0.9f * +d2, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 1.0f, 0.0f);
+				v[215] = Vertex(+w2, -h2, +d2, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 1.0f, 1.0f);
+
+				//chocolate top 9
+				v[216] = Vertex(-w2, -h2, -d2, 0.0f, 0.0f, -1.0f, 1.0f, 0.0f, 0.0f, 0.0f, 1.0f);
+				v[217] = Vertex(-w2 * 0.9f, +h2 * 0.9f, 0.9f * -d2, 0.0f, 0.0f, -1.0f, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f);
+				v[218] = Vertex(+w2 * 0.9f, +h2 * 0.9f, 0.9f * -d2, 0.0f, 0.0f, -1.0f, 1.0f, 0.0f, 0.0f, 1.0f, 0.0f);
+				v[219] = Vertex(+w2, -h2, -d2, 0.0f, 0.0f, -1.0f, 1.0f, 0.0f, 0.0f, 1.0f, 1.0f);
+
+				// Fill in the back face vertex data.
+				v[220] = Vertex(-w2, -h2, +d2, 0.0f, 0.0f, 1.0f, -1.0f, 0.0f, 0.0f, 1.0f, 1.0f);
+				v[221] = Vertex(+w2, -h2, +d2, 0.0f, 0.0f, 1.0f, -1.0f, 0.0f, 0.0f, 0.0f, 1.0f);
+				v[222] = Vertex(+w2 * 0.9f, +h2 * 0.9f, 0.9f * +d2, 0.0f, 0.0f, 1.0f, -1.0f, 0.0f, 0.0f, 0.0f, 0.0f);
+				v[223] = Vertex(-w2 * 0.9f, +h2 * 0.9f, 0.9f * +d2, 0.0f, 0.0f, 1.0f, -1.0f, 0.0f, 0.0f, 1.0f, 0.0f);
+
+				// Fill in the top face vertex data.
+				v[224] = Vertex(-w2 * 0.9f, +h2 * 0.9f, 0.9f * -d2, 0.0f, 1.0f, 0.0f, 1.0f, 0.0f, 0.0f, 0.0f, 1.0f);
+				v[225] = Vertex(-w2 * 0.9f, +h2 * 0.9f, 0.9f * +d2, 0.0f, 1.0f, 0.0f, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f);
+				v[226] = Vertex(+w2 * 0.9f, +h2 * 0.9f, 0.9f * +d2, 0.0f, 1.0f, 0.0f, 1.0f, 0.0f, 0.0f, 1.0f, 0.0f);
+				v[227] = Vertex(+w2 * 0.9f, +h2 * 0.9f, 0.9f * -d2, 0.0f, 1.0f, 0.0f, 1.0f, 0.0f, 0.0f, 1.0f, 1.0f);
+
+				// Fill in the bottom face vertex data.
+				v[228] = Vertex(-w2, -h2, -d2, 0.0f, -1.0f, 0.0f, -1.0f, 0.0f, 0.0f, 1.0f, 1.0f);
+				v[229] = Vertex(+w2, -h2, -d2, 0.0f, -1.0f, 0.0f, -1.0f, 0.0f, 0.0f, 0.0f, 1.0f);
+				v[233] = Vertex(+w2, -h2, +d2, 0.0f, -1.0f, 0.0f, -1.0f, 0.0f, 0.0f, 0.0f, 0.0f);
+				v[231] = Vertex(-w2, -h2, +d2, 0.0f, -1.0f, 0.0f, -1.0f, 0.0f, 0.0f, 1.0f, 0.0f);
+
+				// Fill in the left face vertex data.
+				v[232] = Vertex(-w2, -h2, +d2, -1.0f, 0.0f, 0.0f, 0.0f, 0.0f, -1.0f, 0.0f, 1.0f);
+				v[233] = Vertex(-w2 * 0.9f, +h2 * 0.9f, 0.9f * +d2, -1.0f, 0.0f, 0.0f, 0.0f, 0.0f, -1.0f, 0.0f, 0.0f);
+				v[234] = Vertex(-w2 * 0.9f, +h2 * 0.9f, 0.9f * -d2, -1.0f, 0.0f, 0.0f, 0.0f, 0.0f, -1.0f, 1.0f, 0.0f);
+				v[235] = Vertex(-w2, -h2, -d2, -1.0f, 0.0f, 0.0f, 0.0f, 0.0f, -1.0f, 1.0f, 1.0f);
+
+				// Fill in the right face vertex data.
+				v[236] = Vertex(+w2, -h2, -d2, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f, 1.0f);
+				v[237] = Vertex(+w2 * 0.9f, +h2 * 0.9f, 0.9f * -d2, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f, 0.0f);
+				v[238] = Vertex(+w2 * 0.9f, +h2 * 0.9f, 0.9f * +d2, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 1.0f, 0.0f);
+				v[239] = Vertex(+w2, -h2, +d2, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 1.0f, 1.0f);
+
+				//chocolate top 10
+				v[240] = Vertex(-w2, -h2, -d2, 0.0f, 0.0f, -1.0f, 1.0f, 0.0f, 0.0f, 0.0f, 1.0f);
+				v[241] = Vertex(-w2 * 0.9f, +h2 * 0.9f, 0.9f * -d2, 0.0f, 0.0f, -1.0f, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f);
+				v[242] = Vertex(+w2 * 0.9f, +h2 * 0.9f, 0.9f * -d2, 0.0f, 0.0f, -1.0f, 1.0f, 0.0f, 0.0f, 1.0f, 0.0f);
+				v[243] = Vertex(+w2, -h2, -d2, 0.0f, 0.0f, -1.0f, 1.0f, 0.0f, 0.0f, 1.0f, 1.0f);
+
+				// Fill in the back face vertex data.
+				v[244] = Vertex(-w2, -h2, +d2, 0.0f, 0.0f, 1.0f, -1.0f, 0.0f, 0.0f, 1.0f, 1.0f);
+				v[245] = Vertex(+w2, -h2, +d2, 0.0f, 0.0f, 1.0f, -1.0f, 0.0f, 0.0f, 0.0f, 1.0f);
+				v[246] = Vertex(+w2 * 0.9f, +h2 * 0.9f, 0.9f * +d2, 0.0f, 0.0f, 1.0f, -1.0f, 0.0f, 0.0f, 0.0f, 0.0f);
+				v[247] = Vertex(-w2 * 0.9f, +h2 * 0.9f, 0.9f * +d2, 0.0f, 0.0f, 1.0f, -1.0f, 0.0f, 0.0f, 1.0f, 0.0f);
+
+				// Fill in the top face vertex data.
+				v[248] = Vertex(-w2 * 0.9f, +h2 * 0.9f, 0.9f * -d2, 0.0f, 1.0f, 0.0f, 1.0f, 0.0f, 0.0f, 0.0f, 1.0f);
+				v[249] = Vertex(-w2 * 0.9f, +h2 * 0.9f, 0.9f * +d2, 0.0f, 1.0f, 0.0f, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f);
+				v[250] = Vertex(+w2 * 0.9f, +h2 * 0.9f, 0.9f * +d2, 0.0f, 1.0f, 0.0f, 1.0f, 0.0f, 0.0f, 1.0f, 0.0f);
+				v[251] = Vertex(+w2 * 0.9f, +h2 * 0.9f, 0.9f * -d2, 0.0f, 1.0f, 0.0f, 1.0f, 0.0f, 0.0f, 1.0f, 1.0f);
+
+				// Fill in the bottom face vertex data.
+				v[252] = Vertex(-w2, -h2, -d2, 0.0f, -1.0f, 0.0f, -1.0f, 0.0f, 0.0f, 1.0f, 1.0f);
+				v[253] = Vertex(+w2, -h2, -d2, 0.0f, -1.0f, 0.0f, -1.0f, 0.0f, 0.0f, 0.0f, 1.0f);
+				v[254] = Vertex(+w2, -h2, +d2, 0.0f, -1.0f, 0.0f, -1.0f, 0.0f, 0.0f, 0.0f, 0.0f);
+				v[255] = Vertex(-w2, -h2, +d2, 0.0f, -1.0f, 0.0f, -1.0f, 0.0f, 0.0f, 1.0f, 0.0f);
+
+				// Fill in the left face vertex data.
+				v[256] = Vertex(-w2, -h2, +d2, -1.0f, 0.0f, 0.0f, 0.0f, 0.0f, -1.0f, 0.0f, 1.0f);
+				v[257] = Vertex(-w2 * 0.9f, +h2 * 0.9f, 0.9f * +d2, -1.0f, 0.0f, 0.0f, 0.0f, 0.0f, -1.0f, 0.0f, 0.0f);
+				v[258] = Vertex(-w2 * 0.9f, +h2 * 0.9f, 0.9f * -d2, -1.0f, 0.0f, 0.0f, 0.0f, 0.0f, -1.0f, 1.0f, 0.0f);
+				v[259] = Vertex(-w2, -h2, -d2, -1.0f, 0.0f, 0.0f, 0.0f, 0.0f, -1.0f, 1.0f, 1.0f);
+
+				// Fill in the right face vertex data.
+				v[260] = Vertex(+w2, -h2, -d2, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f, 1.0f);
+				v[261] = Vertex(+w2 * 0.9f, +h2 * 0.9f, 0.9f * -d2, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f, 0.0f);
+				v[262] = Vertex(+w2 * 0.9f, +h2 * 0.9f, 0.9f * +d2, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 1.0f, 0.0f);
+				v[263] = Vertex(+w2, -h2, +d2, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 1.0f, 1.0f);
+
+				meshData.Vertices.assign(&v[0], &v[264]);
+
+			
+
+			//	meshData.Indices32.assign(&i[0 + ], &i[36 + ]);
 				
-				derp += 24;
-				derp2 += 36;
 
-			}
-		}
-		
-		v[240] = Vertex(-w2, -h2, -d2, 0.0f, 0.0f, -1.0f, 1.0f, 0.0f, 0.0f, 0.0f, 1.0f);
-		v[241] = Vertex(-w2 * 0.9f, +h2 * 0.9f, 0.9f * -d2, 0.0f, 0.0f, -1.0f, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f);
-		v[242] = Vertex(+w2 * 0.9f, +h2 * 0.9f, 0.9f * -d2, 0.0f, 0.0f, -1.0f, 1.0f, 0.0f, 0.0f, 1.0f, 0.0f);
-		v[243] = Vertex(+w2, -h2, -d2, 0.0f, 0.0f, -1.0f, 1.0f, 0.0f, 0.0f, 1.0f, 1.0f);
-
-		// Fill in the back face vertex data.
-		v[244] = Vertex(-w2, -h2, +d2, 0.0f, 0.0f, 1.0f, -1.0f, 0.0f, 0.0f, 1.0f, 1.0f);
-		v[245] = Vertex(+w2, -h2, +d2, 0.0f, 0.0f, 1.0f, -1.0f, 0.0f, 0.0f, 0.0f, 1.0f);
-		v[246] = Vertex(+w2 * 0.9f, +h2 * 0.9f, 0.9f * +d2, 0.0f, 0.0f, 1.0f, -1.0f, 0.0f, 0.0f, 0.0f, 0.0f);
-		v[247] = Vertex(-w2 * 0.9f, +h2 * 0.9f, 0.9f * +d2, 0.0f, 0.0f, 1.0f, -1.0f, 0.0f, 0.0f, 1.0f, 0.0f);
-
-		// Fill in the top face vertex data.
-		v[248] = Vertex(-w2 * 0.9f, +h2 * 0.9f, 0.9f * -d2, 0.0f, 1.0f, 0.0f, 1.0f, 0.0f, 0.0f, 0.0f, 1.0f);
-		v[249] = Vertex(-w2 * 0.9f, +h2 * 0.9f, 0.9f * +d2, 0.0f, 1.0f, 0.0f, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f);
-		v[250] = Vertex(+w2 * 0.9f, +h2 * 0.9f, 0.9f * +d2, 0.0f, 1.0f, 0.0f, 1.0f, 0.0f, 0.0f, 1.0f, 0.0f);
-		v[251] = Vertex(+w2 * 0.9f, +h2 * 0.9f, 0.9f * -d2, 0.0f, 1.0f, 0.0f, 1.0f, 0.0f, 0.0f, 1.0f, 1.0f);
-
-		// Fill in the bottom face vertex data.
-		v[252] = Vertex(-w2, -h2, -d2, 0.0f, -1.0f, 0.0f, -1.0f, 0.0f, 0.0f, 1.0f, 1.0f);
-		v[253] = Vertex(+w2, -h2, -d2, 0.0f, -1.0f, 0.0f, -1.0f, 0.0f, 0.0f, 0.0f, 1.0f);
-		v[254] = Vertex(+w2, -h2, +d2, 0.0f, -1.0f, 0.0f, -1.0f, 0.0f, 0.0f, 0.0f, 0.0f);
-		v[255] = Vertex(-w2, -h2, +d2, 0.0f, -1.0f, 0.0f, -1.0f, 0.0f, 0.0f, 1.0f, 0.0f);
-
-		// Fill in the left face vertex data.
-		v[256] = Vertex(-w2, -h2, +d2, -1.0f, 0.0f, 0.0f, 0.0f, 0.0f, -1.0f, 0.0f, 1.0f);
-		v[257] = Vertex(-w2 * 0.9f, +h2 * 0.9f, 0.9f * +d2, -1.0f, 0.0f, 0.0f, 0.0f, 0.0f, -1.0f, 0.0f, 0.0f);
-		v[258] = Vertex(-w2 * 0.9f, +h2 * 0.9f, 0.9f * -d2, -1.0f, 0.0f, 0.0f, 0.0f, 0.0f, -1.0f, 1.0f, 0.0f);
-		v[259] = Vertex(-w2, -h2, -d2, -1.0f, 0.0f, 0.0f, 0.0f, 0.0f, -1.0f, 1.0f, 1.0f);
-
-		// Fill in the right face vertex data.
-		v[260] = Vertex(+w2, -h2, -d2, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f, 1.0f);
-		v[261] = Vertex(+w2 * 0.9f, +h2 * 0.9f, 0.9f * -d2, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f, 0.0f);
-		v[262] = Vertex(+w2 * 0.9f, +h2 * 0.9f, 0.9f * +d2, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 1.0f, 0.0f);
-		v[263] = Vertex(+w2, -h2, +d2, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 1.0f, 1.0f);
-
-		meshData.Vertices.assign(&v[0], &v[264]);
 
 		//
 		// Create the indices.
 		//
+		uint32 i[396];
+		// Fill in the front face index data
+		i[0 ] = 0; i[1 ] = 1; i[2 ] = 2;
+		i[3 ] = 0; i[4 ] = 2; i[5 ] = 3;
 
+		// Fill in the back face index data
+		i[6] = 4; i[7] = 5; i[8] = 6;
+		i[9] = 4; i[10] = 6; i[11] = 7;
+
+		// Fill in the top face index data
+		i[12] = 8; i[13] = 9; i[14   ] = 10;
+		i[15   ] = 8; i[16   ] = 10; i[17   ] = 11;
+
+		// Fill in the bottom face index data
+		i[18   ] = 12; i[19   ] = 13; i[20   ] = 14;
+		i[21   ] = 12; i[22   ] = 14; i[23   ] = 15;
+
+		// Fill in the left face index data
+		i[24   ] = 16; i[25   ] = 17; i[26   ] = 18;
+		i[27   ] = 16; i[28   ] = 18; i[29   ] = 19;
+
+		// Fill in the right face index data
+		i[30   ] = 20; i[31   ] = 21; i[32   ] = 22;
+		i[33   ] = 20; i[34   ] = 22; i[35   ] = 23;
 
 		// Fill in the front face index data
 		i[360] = 0; i[361] = 1; i[362] = 2;
@@ -636,6 +942,132 @@ GeometryGenerator::MeshData GeometryGenerator::CreateSphere(float radius, uint32
 	}
 
     return meshData;
+}
+
+GeometryGenerator::MeshData GeometryGenerator::CreateCandy(float width, float height, float depth, uint32 numSubdivisions)
+{
+	MeshData meshData;
+
+	//
+	// Create the vertices.
+	//
+
+	Vertex v[20];
+
+	float w2 = 0.5f*width;
+	float h2 = 0.5f*height;
+	float d2 = 0.5f*depth;
+
+	// Fill in the top face vertex data.
+	v[0] = Vertex(0.0f   * w2, h2, 0.0f  * d2, 0.0f, 0.0f, -1.0f, 1.0f, 0.0f, 0.0f, 0.0f, 1.0f);
+	v[1] = Vertex(-0.5f  * w2, h2, -0.5  * d2, 0.0f, 0.0f, -1.0f, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f);
+	v[2] = Vertex(-0.75f * w2, h2, 0.0f  * d2, 0.0f, 0.0f, -1.0f, 1.0f, 0.0f, 0.0f, 1.0f, 0.0f);
+	v[3] = Vertex(-0.5f  * w2, h2, 0.5f  * d2, 0.0f, 0.0f, -1.0f, 1.0f, 0.0f, 0.0f, 1.0f, 1.0f);
+	v[4] = Vertex(0.5f   * w2, h2, 0.5f  * d2, 0.0f, 0.0f, 1.0f, -1.0f, 0.0f, 0.0f, 1.0f, 1.0f);
+	v[5] = Vertex(0.75f  * w2, h2, 0.0f  * d2, 0.0f, 0.0f, 1.0f, -1.0f, 0.0f, 0.0f, 0.0f, 1.0f);
+	v[6] = Vertex(0.5f   * w2, h2, -0.5f * d2, 0.0f, 0.0f, 1.0f, -1.0f, 0.0f, 0.0f, 0.0f, 0.0f);
+
+	//Bottom
+	v[7] = Vertex(0.0f   * w2, -h2, 0.0f  * d2, 0.0f, 0.0f, -1.0f, 1.0f, 0.0f, 0.0f, 0.0f, 1.0f);
+	v[8] = Vertex(-0.5f  * w2, -h2, -0.5f * d2, 0.0f, 0.0f, -1.0f, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f);
+	v[9] = Vertex(-0.75f * w2, -h2, 0.0f  * d2, 0.0f, 0.0f, -1.0f, 1.0f, 0.0f, 0.0f, 1.0f, 0.0f);
+	v[10] = Vertex(-0.5f  * w2, -h2, 0.5f  * d2, 0.0f, 0.0f, -1.0f, 1.0f, 0.0f, 0.0f, 1.0f, 1.0f);
+	v[11] = Vertex(0.5f   * w2, -h2, 0.5f  * d2, 0.0f, 0.0f, 1.0f, -1.0f, 0.0f, 0.0f, 1.0f, 1.0f);
+	v[12] = Vertex(0.75f  * w2, -h2, 0.0f  * d2, 0.0f, 0.0f, 1.0f, -1.0f, 0.0f, 0.0f, 0.0f, 1.0f);
+	v[13] = Vertex(0.5f   * w2, -h2, -0.5f * d2, 0.0f, 0.0f, 1.0f, -1.0f, 0.0f, 0.0f, 0.0f, 0.0f);
+
+	//////Middle! 
+	v[14] = Vertex(-0.5f  * (w2*1.5f), 0.0f, -0.5f * (d2*1.5f), 0.0f, 0.0f, -1.0f, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f);
+	v[15] = Vertex(-0.75f * (w2*1.5f), 0.0f, 0.0f  * (d2*1.5f), 0.0f, 0.0f, -1.0f, 1.0f, 0.0f, 0.0f, 1.0f, 0.0f);
+	v[16] = Vertex(-0.5f * (w2*1.5f), 0.0f, 0.5f  * (d2*1.5f), 0.0f, 0.0f, -1.0f, 1.0f, 0.0f, 0.0f, 1.0f, 1.0f);
+	v[17] = Vertex(0.5f  * (w2*1.5f), 0.0f, 0.5f  * (d2*1.5f), 0.0f, 0.0f, 1.0f, -1.0f, 0.0f, 0.0f, 1.0f, 1.0f);
+	v[18] = Vertex(0.75f * (w2*1.5f), 0.0f, 0.0f  * (d2*1.5f), 0.0f, 0.0f, 1.0f, -1.0f, 0.0f, 0.0f, 0.0f, 1.0f);
+	v[19] = Vertex(0.5f  * (w2*1.5f), 0.0f, -0.5f * (d2*1.5f), 0.0f, 0.0f, 1.0f, -1.0f, 0.0f, 0.0f, 0.0f, 0.0f);
+
+
+	meshData.Vertices.assign(&v[0], &v[20]);
+
+	//
+	// Create the indices.
+	//
+
+	uint32 i[108];
+
+	// Fill in the top face index data
+	i[0] = 0; i[1] = 1; i[2] = 2;
+	i[3] = 0; i[4] = 2; i[5] = 3;
+	i[6] = 0; i[7] = 3; i[8] = 4;
+	i[9] = 0; i[10] = 4; i[11] = 5;
+	i[12] = 0; i[13] = 5; i[14] = 6;
+	i[15] = 0; i[16] = 6; i[17] = 1;
+
+	/////bottom face indices
+	i[18] = 7; i[19] = 9; i[20] = 8;
+	i[21] = 7; i[22] = 10; i[23] = 9;
+	i[24] = 7; i[25] = 11; i[26] = 10;
+	i[27] = 7; i[28] = 12; i[29] = 11;
+	i[30] = 7; i[31] = 13; i[32] = 12;
+	i[33] = 7; i[34] = 8; i[35] = 13;
+
+
+	/*Old
+	//Perimeter Top 1/2
+	i[36] = 1; i[37] = 8; i[38] = 2;
+	i[39] = 2; i[40] = 9; i[41] = 3;
+	i[42] = 3; i[43] = 10; i[44] = 4;
+	i[45] = 4; i[46] = 11; i[47] = 5;
+	i[48] = 5; i[49] = 12; i[50] = 6;
+	i[51] = 6; i[52] = 13; i[53] = 1;
+
+	//Perimeter Top 2/2
+	i[54] = 8; i[55] = 9; i[56] = 2;
+	i[57] = 9; i[58] = 10; i[59] = 3;
+	i[60] = 10; i[61] = 11; i[62] = 4;
+	i[63] = 11; i[64] = 12; i[65] = 5;
+	i[66] = 12; i[67] = 13; i[68] = 6;
+	i[69] = 13; i[70] = 8; i[71] = 1;	*/
+
+	//Perimeter Top 1/2
+	i[36] = 1; i[37] = 14; i[38] = 2;
+	i[39] = 2; i[40] = 15; i[41] = 3;
+	i[42] = 3; i[43] = 16; i[44] = 4;
+	i[45] = 4; i[46] = 17; i[47] = 5;
+	i[48] = 5; i[49] = 18; i[50] = 6;
+	i[51] = 6; i[52] = 19; i[53] = 1;
+
+	//Perimeter Top 2/2
+	i[54] = 14; i[55] = 15; i[56] = 2;
+	i[57] = 15; i[58] = 16; i[59] = 3;
+	i[60] = 16; i[61] = 17; i[62] = 4;
+	i[63] = 17; i[64] = 18; i[65] = 5;
+	i[66] = 18; i[67] = 19; i[68] = 6;
+	i[69] = 19; i[70] = 14; i[71] = 1;
+
+	//Perimeter Bottom 1/2
+	i[36 + 36] = 14; i[37 + 36] = 8; i[38 + 36] = 15;
+	i[39 + 36] = 15; i[40 + 36] = 9; i[41 + 36] = 16;
+	i[42 + 36] = 16; i[43 + 36] = 10; i[44 + 36] = 17;
+	i[45 + 36] = 17; i[46 + 36] = 11; i[47 + 36] = 18;
+	i[48 + 36] = 18; i[49 + 36] = 12; i[50 + 36] = 19;
+	i[51 + 36] = 19; i[52 + 36] = 13; i[53 + 36] = 14;
+
+	//Perimeter Bottom 2/2
+	i[54 + 36] = 8; i[55 + 36] = 9; i[56 + 36] = 15;
+	i[57 + 36] = 9; i[58 + 36] = 10; i[59 + 36] = 16;
+	i[60 + 36] = 10; i[61 + 36] = 11; i[62 + 36] = 17;
+	i[63 + 36] = 11; i[64 + 36] = 12; i[65 + 36] = 18;
+	i[66 + 36] = 12; i[67 + 36] = 13; i[68 + 36] = 19;
+	i[69 + 36] = 13; i[70 + 36] = 8; i[71 + 36] = 14;
+
+	meshData.Indices32.assign(&i[0], &i[108]);
+
+	// Put a cap on the number of subdivisions.
+	numSubdivisions = std::min<uint32>(numSubdivisions, 6u);
+
+	for (uint32 i = 0; i < numSubdivisions; ++i)
+		Subdivide(meshData);
+
+	return meshData;
 }
  
 void GeometryGenerator::Subdivide(MeshData& meshData)
