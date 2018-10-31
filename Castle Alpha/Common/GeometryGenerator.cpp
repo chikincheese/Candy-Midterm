@@ -623,7 +623,7 @@ GeometryGenerator::MeshData GeometryGenerator::CreateChocolate(float width, floa
 
 		// Fill in the top face index data
 		i[12] = 8; i[13] = 9; i[14   ] = 10;
-		i[15   ] = 8; i[16   ] = 10; i[17   ] = 11;
+		i[15] = 8; i[16   ] = 10; i[17   ] = 11;
 
 		// Fill in the bottom face index data
 		i[18   ] = 12; i[19   ] = 13; i[20   ] = 14;
